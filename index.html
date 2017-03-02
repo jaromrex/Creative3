@@ -1,0 +1,25 @@
+<html>
+<head>
+<meta charset="utf-8">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.min.js"></script>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <form ng-app='app' ng-controller='MainCtrl'>
+
+	   <h1>Weekly Spendings</h1>
+
+	   <ul>
+		  <li ng-repeat='payment in payments' ng-click='toggleActive(payment)' ng-class='{active:payment.active}'>
+			 {{payment.name}} <span>{{payment.price | currency}}</span>
+		  </li>
+	   </ul>
+
+	   <div class='total'>
+		  Total: <span>{{total() | currency}}</span>
+	   </div>
+    
+    </form>
+<script src="app.js"></script>
+</body>
+</html>
