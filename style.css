@@ -5,7 +5,7 @@ body{
 	text-align:center;
 }
 
-form{
+.everything {
 	border-radius: 2px;
     background-color: cornflowerblue;
 	box-shadow: 0 1px 1px #ccc;
@@ -14,7 +14,7 @@ form{
 	margin: 50px auto;
 }
 
-form h1{
+h1{
 	color: floralwhite;
 	font-size:64px;
 	font-weight: normal;
@@ -22,7 +22,7 @@ form h1{
 	line-height:1;
 }
 
-form ul{
+ul{
 	list-style:none;
 	color: floralwhite;
 	font-size:20px;
@@ -31,22 +31,22 @@ form ul{
 	margin:20px 0 15px;
 }
 
-form ul li{
+ul li{
 	padding:20px 30px;
 	background-color: firebrick;
 	margin-bottom:8px;
     cursor: pointer;
 }
 
-form ul li span{
+ul li span{
 	float:right;
 }
 
-form ul li.active{
+ul li.active{
 	background-color: forestgreen;
 }
 
-div.total{
+.total{
 	border-top:1px solid rgba(255,255,255,0.5);
 	padding:15px 30px;
 	font-size:20px;
@@ -55,6 +55,6 @@ div.total{
 	color: floralwhite;
 }
 
-div.total span{
+.total span{
 	float:right;
 }

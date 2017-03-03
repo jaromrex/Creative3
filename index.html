@@ -4,12 +4,17 @@
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.min.js"></script>
 <link rel="stylesheet" type="text/css" href="style.css">
 </head>
-<body>
-    <form ng-app='app' ng-controller='MainCtrl'>
+<body ng-app='app' ng-controller='MainCtrl'>
+    <div ng-app='app' ng-controller='MainCtrl' class='everything'>
 
 	   <h1>Weekly Spendings</h1>
-
-	   <ul>
+       <form ng-submit='addPayment()'>
+            <input type='text' ng-model='paymentInput' placeholder='Add New'>
+            <input type='number' ng-model='costInput' placeholder='Add New'>
+            <input type='submit' value='Add Payment'>
+       </form>
+            
+        <ul>
 		  <li ng-repeat='payment in payments' ng-click='toggleActive(payment)' ng-class='{active:payment.active}'>
 			 {{payment.name}} <span>{{payment.price | currency}}</span>
 		  </li>
@@ -19,7 +24,7 @@
 		  Total: <span>{{total() | currency}}</span>
 	   </div>
     
-    </form>
+    </div>
 <script src="app.js"></script>
 </body>
 </html>
